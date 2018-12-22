@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct PostMoneyRequest: Codable {
+struct MoneyRequest: Codable {
     let title: String
     let description: String
-    let categories: [String]
     let wantedAmount: uint
     let currentAmount: uint
+    let receiverRef: String
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D62350A21CDED3900F6FF42 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62350921CDED3900F6FF42 /* NetworkService.swift */; };
-		9D62350D21CDF24A00F6FF42 /* PostMoneyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62350C21CDF24A00F6FF42 /* PostMoneyRequest.swift */; };
+		9D62350D21CDF24A00F6FF42 /* MoneyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62350C21CDF24A00F6FF42 /* MoneyRequest.swift */; };
 		9D62350F21CDFBB600F6FF42 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62350E21CDFBB600F6FF42 /* Get.swift */; };
 		9D62351721CE3A1700F6FF42 /* CreateRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D62351621CE3A1700F6FF42 /* CreateRequest.storyboard */; };
 		9D62351921CE3A4400F6FF42 /* CreateRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62351821CE3A4400F6FF42 /* CreateRequestViewController.swift */; };
@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		9D62350921CDED3900F6FF42 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		9D62350C21CDF24A00F6FF42 /* PostMoneyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMoneyRequest.swift; sourceTree = "<group>"; };
+		9D62350C21CDF24A00F6FF42 /* MoneyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRequest.swift; sourceTree = "<group>"; };
 		9D62350E21CDFBB600F6FF42 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		9D62351621CE3A1700F6FF42 /* CreateRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRequest.storyboard; sourceTree = "<group>"; };
 		9D62351821CE3A4400F6FF42 /* CreateRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		9D62350B21CDF23300F6FF42 /* ModelObjects */ = {
 			isa = PBXGroup;
 			children = (
-				9D62350C21CDF24A00F6FF42 /* PostMoneyRequest.swift */,
+				9D62350C21CDF24A00F6FF42 /* MoneyRequest.swift */,
 				9D62350E21CDFBB600F6FF42 /* Get.swift */,
 			);
 			path = ModelObjects;
@@ -257,7 +257,7 @@
 				9D66EC5721CD93C5000AF10C /* RootViewController.swift in Sources */,
 				9D62350A21CDED3900F6FF42 /* NetworkService.swift in Sources */,
 				9D66EC5521CD93C5000AF10C /* AppDelegate.swift in Sources */,
-				9D62350D21CDF24A00F6FF42 /* PostMoneyRequest.swift in Sources */,
+				9D62350D21CDF24A00F6FF42 /* MoneyRequest.swift in Sources */,
 				9D62350F21CDFBB600F6FF42 /* Get.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

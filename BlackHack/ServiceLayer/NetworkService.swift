@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkService {
     // We'll need a completion block that returns an error if we run into any problems
-    func submitPost(post: PostMoneyRequest, completion:((Error?) -> Void)?) {
+    func submitPost(post: MoneyRequest, completion:((Error?) -> Void)?) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "test.stax.tlabs.cloud"

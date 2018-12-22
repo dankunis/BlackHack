@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E4m-UV-ldU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,37 +19,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoM-mI-tFE">
-                                <rect key="frame" x="121" y="220" width="133" height="21"/>
+                                <rect key="frame" x="121" y="264" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA">
+                                <rect key="frame" x="40" y="587" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Og3-Xd-dt7"/>
+                                    <constraint firstAttribute="width" constant="100" id="SWr-hK-NNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V7-zJ-aa5">
-                                <rect key="frame" x="136" y="587" width="102" height="30"/>
-                                <state key="normal" title="Create request"/>
+                                <rect key="frame" x="235" y="587" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0K7-ZU-gfS"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZqV-ZS-Wx7"/>
+                                </constraints>
+                                <state key="normal" title="Request">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="createMoneyRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2k6-Ql-jfg"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA">
-                                <rect key="frame" x="162.5" y="507" width="50" height="30"/>
-                                <state key="normal" title="Donate"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DoM-mI-tFE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Q1-1O-4qo"/>
-                            <constraint firstItem="YPz-OE-PHA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HFK-eC-x35"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5V7-zJ-aa5" secondAttribute="bottom" constant="50" id="SQI-HR-EJI"/>
-                            <constraint firstItem="5V7-zJ-aa5" firstAttribute="top" secondItem="YPz-OE-PHA" secondAttribute="bottom" constant="50" id="VRZ-N6-3Tq"/>
-                            <constraint firstItem="5V7-zJ-aa5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sRE-X6-KCw"/>
+                            <constraint firstItem="YPz-OE-PHA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="X55-VS-w8o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5V7-zJ-aa5" secondAttribute="trailing" constant="40" id="jSt-0O-S0c"/>
+                            <constraint firstItem="5V7-zJ-aa5" firstAttribute="centerY" secondItem="YPz-OE-PHA" secondAttribute="centerY" id="jWJ-Qv-mvZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YPz-OE-PHA" secondAttribute="bottom" constant="40" id="oNq-xX-ypJ"/>
                             <constraint firstItem="DoM-mI-tFE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="zQV-RV-qGm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="u09-sa-h1K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zNx-mN-rs6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E4m-UV-ldU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WBe-XU-hIr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bRL-o2-O1g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2h-3J-qBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="34"/>
         </scene>
     </scenes>
 </document>

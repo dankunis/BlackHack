@@ -9,22 +9,21 @@
 import UIKit
 
 class RootViewController: UIViewController {
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.title = "Black Hack"
     }
 
     // MARK: - IBActions
     
     @IBAction func createMoneyRequestAction(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "CreateRequest", bundle: nil).instantiateInitialViewController() {
-            self.present(vc, animated: true, completion: nil)
+        if let vc = UIStoryboard(name: "CreateRequest", bundle: nil).instantiateInitialViewController() as? CreateRequestViewController {
+            vc.navigationItem.largeTitleDisplayMode = .never
+            vc.title = "Create Request"
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 
