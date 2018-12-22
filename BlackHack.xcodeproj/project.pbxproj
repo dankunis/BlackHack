@@ -12,6 +12,7 @@
 		9D62350F21CDFBB600F6FF42 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62350E21CDFBB600F6FF42 /* Get.swift */; };
 		9D62351721CE3A1700F6FF42 /* CreateRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D62351621CE3A1700F6FF42 /* CreateRequest.storyboard */; };
 		9D62351921CE3A4400F6FF42 /* CreateRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62351821CE3A4400F6FF42 /* CreateRequestViewController.swift */; };
+		9D62351B21CE8D9900F6FF42 /* AccountCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62351A21CE8D9900F6FF42 /* AccountCreator.swift */; };
 		9D66EC5521CD93C5000AF10C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EC5421CD93C5000AF10C /* AppDelegate.swift */; };
 		9D66EC5721CD93C5000AF10C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EC5621CD93C5000AF10C /* RootViewController.swift */; };
 		9D66EC5A21CD93C5000AF10C /* RootView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D66EC5821CD93C5000AF10C /* RootView.storyboard */; };
@@ -36,6 +37,7 @@
 		9D62350E21CDFBB600F6FF42 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		9D62351621CE3A1700F6FF42 /* CreateRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRequest.storyboard; sourceTree = "<group>"; };
 		9D62351821CE3A4400F6FF42 /* CreateRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestViewController.swift; sourceTree = "<group>"; };
+		9D62351A21CE8D9900F6FF42 /* AccountCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreator.swift; sourceTree = "<group>"; };
 		9D66EC5121CD93C5000AF10C /* BlackHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D66EC5421CD93C5000AF10C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D66EC5621CD93C5000AF10C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				9D62350C21CDF24A00F6FF42 /* MoneyRequest.swift */,
 				9D62350E21CDFBB600F6FF42 /* Get.swift */,
+				9D62351A21CE8D9900F6FF42 /* AccountCreator.swift */,
 			);
 			path = ModelObjects;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				9D62351921CE3A4400F6FF42 /* CreateRequestViewController.swift in Sources */,
 				9D66EC5721CD93C5000AF10C /* RootViewController.swift in Sources */,
 				9D62350A21CDED3900F6FF42 /* NetworkService.swift in Sources */,
+				9D62351B21CE8D9900F6FF42 /* AccountCreator.swift in Sources */,
 				9D66EC5521CD93C5000AF10C /* AppDelegate.swift in Sources */,
 				9D62350D21CDF24A00F6FF42 /* MoneyRequest.swift in Sources */,
 				9D62350F21CDFBB600F6FF42 /* Get.swift in Sources */,

@@ -60,8 +60,8 @@ class CreateRequestViewController: UIViewController {
             return
         }
         let networkService = NetworkService()
-        
-        let post = MoneyRequest(title: reqTitle, description: reqDescription, wantedAmount: reqWantedAmount, currentAmount: 0, receiverRef: "test")
+        let userHash = UserDefaults.standard.string(forKey: "userHash")!
+        let post = MoneyRequest(title: reqTitle, description: reqDescription, wantedAmount: reqWantedAmount, currentAmount: 0, receiverRef: userHash)
         
         networkService.submitPost(post: post, completion: { (error) in print(error?.localizedDescription ?? "error")})
         

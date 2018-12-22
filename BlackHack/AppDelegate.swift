@@ -15,7 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let launchedBefore = UserDefaults.standard.string(forKey: "userHash")
+        if (launchedBefore == nil) {
+            print("First launch, setting UserDefault.")
+            let networkService = NetworkService()
+            let userHash = networkService.generateAccount(newAccount: AccountCreator(password: "123"), completion: {(error) in
+                guard error != nil
+                    else {
+                        fatalError()
+                }
+            })
+            UserDefaults.standard.set(userHash, forKey: "userHash")
+        } else {
+            print("User hash:\t\(UserDefaults.standard.string(forKey: "userHash")!)")
+        }
         return true
     }
 
