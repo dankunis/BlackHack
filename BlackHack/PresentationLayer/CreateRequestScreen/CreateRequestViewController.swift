@@ -28,6 +28,6 @@ class CreateRequestViewController: UIViewController {
         
         let post = PostMoneyRequest(title: "Test", description: "I need money", categories: ["Business"], wantedAmount: 1000, currentAmount: 0)
         
-        networkService.submitPost(post: post, completion: { [weak self] (error) in print(error?.localizedDescription)})
+        networkService.submitPost(post: post, completion: { (error) in print(error?.localizedDescription ?? "error")})
     }
 }

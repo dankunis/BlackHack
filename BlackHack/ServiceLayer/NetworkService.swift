@@ -40,7 +40,6 @@ class NetworkService {
         } catch {
             completion?(error)
         }
-        print(request.description)
         
         // Create and run a URLSession data task with our JSON encoded POST request
         let config = URLSessionConfiguration.default
