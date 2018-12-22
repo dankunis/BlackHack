@@ -12,10 +12,10 @@ class NetworkService {
     // We'll need a completion block that returns an error if we run into any problems
     func submitPost(post: PostMoneyRequest, completion:((Error?) -> Void)?) {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "http"
-        urlComponents.host = "10.177.0.214"
-        urlComponents.port = 9191
-        urlComponents.path = "/storage"
+        urlComponents.scheme = "https"
+        urlComponents.host = "test.stax.tlabs.cloud"
+        urlComponents.port = 443
+        urlComponents.path = "/projects/shahmadidan2/contexts/test/storage"
         guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
         print(url)
         
@@ -40,6 +40,7 @@ class NetworkService {
         } catch {
             completion?(error)
         }
+        print(request.description)
         
         // Create and run a URLSession data task with our JSON encoded POST request
         let config = URLSessionConfiguration.default

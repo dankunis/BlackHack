@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  BlackHack
 //
 //  Created by Daniel on 22/12/2018.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let networkService = NetworkService()
-        
-        let post = PostMoneyRequest(title: "maxim is a fool")
-        
-        networkService.submitPost(post: post, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - IBActions
+    
+    @IBAction func createMoneyRequestAction(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "CreateRequest", bundle: nil).instantiateInitialViewController() {
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 
 }
 
