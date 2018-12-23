@@ -248,6 +248,7 @@ class StorageService {
             } else {
                 print("no readable data received in response")
             }
+            completion(nil)
         }
         task.resume()
     }

@@ -63,6 +63,7 @@ class DonateViewController: UIViewController {
             showAlertWithMessage(title: "Please, enter valid info", message: nil)
         }
         let payment: IPayment = ETHPayment()
+        
         let postPayment = PostPayment(recipient_ref: request.ref_id, amount: donationAmount)
         payment.pay(postPayment: postPayment, completion: { (error) in
 //            guard error != nil else {

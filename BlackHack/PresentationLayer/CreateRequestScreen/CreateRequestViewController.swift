@@ -15,6 +15,7 @@ class CreateRequestViewController: UIViewController {
     @IBOutlet weak var requestTitleTextField: UITextField!
     @IBOutlet weak var wantedAmountTextField: UITextField!
     @IBOutlet weak var requestDescriptionTextView: UITextView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Private fields
     
@@ -59,21 +60,22 @@ class CreateRequestViewController: UIViewController {
             showAlertWithMessage(title: "Please, enter valid info", message: nil)
             return
         }
-        let networkService = StorageService()
+        let storageService = StorageService()
         let userHash = UserDefaults.standard.string(forKey: "userHash")!
         let post = MoneyRequest(title: reqTitle, description: reqDescription, wantedAmount: reqWantedAmount, currentAmount: 0, receiverRef: userHash)
-        
-        networkService.submitPost(post: post, completion: { [weak self] (error) in
-            guard error != nil else {
+        activityIndicator.startAnimating()
+        storageService.submitPost(post: post, completion: { [weak self] (error) in
+            guard error == nil else {
                 DispatchQueue.main.async {
+                    self?.activityIndicator.stopAnimating()
                     self?.showAlertWithMessage(title: "Error occured", message: error?.localizedDescription)
                 }
                 return
             }
-//            DispatchQueue.main.async {
-//                self?.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
-//            }
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+                self?.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
+            }
         })
-        self.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
     }
 }
