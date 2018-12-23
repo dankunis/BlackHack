@@ -9,7 +9,7 @@
 import Foundation
 
 class ETHPayment: IPayment {
-    func pay(hash: String, completion: @escaping ((Error?) -> Void)) {
+    func pay(postPayment: PostPayment, completion: @escaping ((Error?) -> Void)) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "test.stax.tlabs.cloud"
@@ -32,7 +32,7 @@ class ETHPayment: IPayment {
         // Now let's encode out Post struct into JSON data...
         let encoder = JSONEncoder()
         do {
-            let jsonData = try encoder.encode(PostPayment(ref_id: hash))
+            let jsonData = try encoder.encode(postPayment)
             // ... and set our request's HTTP body
             request.httpBody = jsonData
             print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")

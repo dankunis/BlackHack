@@ -10,5 +10,5 @@ import Foundation
 
 protocol IPayment {
     
-    func pay(hash: String, completion: @escaping ((Error?) -> Void))
+    func pay(postPayment: PostPayment, completion: @escaping ((Error?) -> Void))
 }

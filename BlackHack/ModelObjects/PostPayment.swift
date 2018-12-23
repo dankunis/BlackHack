@@ -9,5 +9,6 @@
 import Foundation
 
 struct PostPayment: Codable {
-    let ref_id: String
+    let recipient_ref: String
+    let amount: uint
 }

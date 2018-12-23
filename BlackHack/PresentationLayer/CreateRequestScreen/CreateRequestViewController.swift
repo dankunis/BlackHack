@@ -56,15 +56,23 @@ class CreateRequestViewController: UIViewController {
     
     @IBAction func createMoneyRequestAction(_ sender: UIButton) {
         if !validateInput() {
-            showAlertWithMessage(title: "Введите корректные данные", message: nil)
+            showAlertWithMessage(title: "Please, enter valid info", message: nil)
             return
         }
         let networkService = StorageService()
         let userHash = UserDefaults.standard.string(forKey: "userHash")!
         let post = MoneyRequest(title: reqTitle, description: reqDescription, wantedAmount: reqWantedAmount, currentAmount: 0, receiverRef: userHash)
         
-        networkService.submitPost(post: post, completion: { (error) in print(error?.localizedDescription ?? "error")})
-        
-        showAlertWithMessage(title: "Запрос сохранен", message: nil)
+        networkService.submitPost(post: post, completion: { [weak self] (error) in
+            guard error != nil else {
+                DispatchQueue.main.async {
+                    self?.showAlertWithMessage(title: "Error occured", message: error?.localizedDescription)
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                self?.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
+            }
+        })
     }
 }
