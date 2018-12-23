@@ -35,7 +35,7 @@ class RequestTableViewCell: UITableViewCell, IRequestTableViewCell {
             if currentAmount == 0 {
                 progressPercentage.text = "0%"
             } else {
-                progressPercentage.text = String(Int((wantedAmount / currentAmount)*100)) + "%"
+                progressPercentage.text = String(Int((currentAmount / wantedAmount)*100)) + "%"
             }
         }
     }
@@ -44,7 +44,7 @@ class RequestTableViewCell: UITableViewCell, IRequestTableViewCell {
             if currentAmount == 0 {
                 progressPercentage.text = "0%"
             } else {
-                progressPercentage.text = String(Int((wantedAmount / currentAmount)*100)) + "%"
+                progressPercentage.text = String(Int((currentAmount / wantedAmount)*100)) + "%"
             }
         }
     }

@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoM-mI-tFE">
                                 <rect key="frame" x="121" y="536" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V7-zJ-aa5">
@@ -38,13 +38,13 @@
                                     <action selector="createMoneyRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2k6-Ql-jfg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="40" y="587" width="112.5" height="40"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Og3-Xd-dt7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <state key="normal" title="Donate">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -52,12 +52,21 @@
                                     <action selector="donateMoneyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caV-cQ-nc9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share and request for money on the fly." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-dd-5vB">
+                                <rect key="frame" x="40" y="136" width="295" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DoM-mI-tFE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Q1-1O-4qo"/>
                             <constraint firstItem="5V7-zJ-aa5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="BQT-31-P2g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nBT-dd-5vB" secondAttribute="trailing" constant="40" id="DZB-VN-3w7"/>
                             <constraint firstItem="5V7-zJ-aa5" firstAttribute="top" secondItem="DoM-mI-tFE" secondAttribute="bottom" constant="30" id="I8W-q7-Mr0"/>
+                            <constraint firstItem="nBT-dd-5vB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SPY-kf-4yo"/>
+                            <constraint firstItem="nBT-dd-5vB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="UcY-a8-KdZ"/>
                             <constraint firstItem="YPz-OE-PHA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="X55-VS-w8o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5V7-zJ-aa5" secondAttribute="trailing" constant="40" id="jSt-0O-S0c"/>
                             <constraint firstItem="5V7-zJ-aa5" firstAttribute="centerY" secondItem="YPz-OE-PHA" secondAttribute="centerY" id="jWJ-Qv-mvZ"/>
