@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ova-60-fqZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Requests List View Controller-->
+        <scene sceneID="GgM-oF-y5m">
+            <objects>
+                <viewController id="Ova-60-fqZ" customClass="RequestsListViewController" customModule="BlackHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nb2-2e-8bW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ukO-jD-Ew8">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5IK-N5-Wjg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5IK-N5-Wjg" firstAttribute="leading" secondItem="5Ha-TK-RHU" secondAttribute="leading" id="TeK-LV-I6o"/>
+                            <constraint firstItem="ukO-jD-Ew8" firstAttribute="centerY" secondItem="nb2-2e-8bW" secondAttribute="centerY" id="ZAm-7D-FIC"/>
+                            <constraint firstItem="5Ha-TK-RHU" firstAttribute="trailing" secondItem="5IK-N5-Wjg" secondAttribute="trailing" id="cWu-4t-Ebd"/>
+                            <constraint firstItem="5Ha-TK-RHU" firstAttribute="bottom" secondItem="5IK-N5-Wjg" secondAttribute="bottom" id="kX6-Gm-BWE"/>
+                            <constraint firstItem="5IK-N5-Wjg" firstAttribute="top" secondItem="5Ha-TK-RHU" secondAttribute="top" id="nPs-ps-snX"/>
+                            <constraint firstItem="ukO-jD-Ew8" firstAttribute="centerX" secondItem="nb2-2e-8bW" secondAttribute="centerX" id="vZa-k5-xGi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Ha-TK-RHU"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ukO-jD-Ew8" id="fxZ-MR-3c7"/>
+                        <outlet property="requestsTableView" destination="5IK-N5-Wjg" id="n1P-ZS-OdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zi-EF-X95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1962" y="-90"/>
+        </scene>
+    </scenes>
+</document>

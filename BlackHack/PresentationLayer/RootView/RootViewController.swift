@@ -15,6 +15,17 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Black Hack"
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        #imageLiteral(resourceName: "backgroundRoot").draw(in: self.view.bounds)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image)
+        }else{
+            UIGraphicsEndImageContext()
+            debugPrint("Image not available")
+        }
     }
 
     // MARK: - IBActions
@@ -26,6 +37,13 @@ class RootViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-
+    
+    @IBAction func donateMoneyAction(_ sender: Any) {
+        if let vc = UIStoryboard(name: "RequestsListView", bundle: nil).instantiateInitialViewController() as? RequestsListViewController {
+            vc.navigationItem.largeTitleDisplayMode = .never
+            vc.title = "List of requests"
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 

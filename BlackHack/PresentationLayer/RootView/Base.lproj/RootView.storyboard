@@ -6,11 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--BlackHack-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="BlackHack" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,28 +20,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoM-mI-tFE">
-                                <rect key="frame" x="121" y="264" width="133" height="21"/>
+                                <rect key="frame" x="121" y="536" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA">
-                                <rect key="frame" x="40" y="587" width="100" height="40"/>
-                                <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Og3-Xd-dt7"/>
-                                    <constraint firstAttribute="width" constant="100" id="SWr-hK-NNk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Donate">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V7-zJ-aa5">
-                                <rect key="frame" x="235" y="587" width="100" height="40"/>
+                                <rect key="frame" x="222.5" y="587" width="112.5" height="40"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="0K7-ZU-gfS"/>
                                     <constraint firstAttribute="height" constant="40" id="ZqV-ZS-Wx7"/>
                                 </constraints>
                                 <state key="normal" title="Request">
@@ -50,19 +38,35 @@
                                     <action selector="createMoneyRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2k6-Ql-jfg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPz-OE-PHA">
+                                <rect key="frame" x="40" y="587" width="112.5" height="40"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Og3-Xd-dt7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="donateMoneyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caV-cQ-nc9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DoM-mI-tFE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Q1-1O-4qo"/>
+                            <constraint firstItem="5V7-zJ-aa5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="BQT-31-P2g"/>
+                            <constraint firstItem="5V7-zJ-aa5" firstAttribute="top" secondItem="DoM-mI-tFE" secondAttribute="bottom" constant="30" id="I8W-q7-Mr0"/>
                             <constraint firstItem="YPz-OE-PHA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="X55-VS-w8o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5V7-zJ-aa5" secondAttribute="trailing" constant="40" id="jSt-0O-S0c"/>
                             <constraint firstItem="5V7-zJ-aa5" firstAttribute="centerY" secondItem="YPz-OE-PHA" secondAttribute="centerY" id="jWJ-Qv-mvZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YPz-OE-PHA" secondAttribute="bottom" constant="40" id="oNq-xX-ypJ"/>
-                            <constraint firstItem="DoM-mI-tFE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="zQV-RV-qGm"/>
+                            <constraint firstItem="YPz-OE-PHA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="yKR-NM-4br"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u09-sa-h1K"/>
+                    <navigationItem key="navigationItem" title="BlackHack" largeTitleDisplayMode="always" id="u09-sa-h1K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,8 +77,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E4m-UV-ldU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WBe-XU-hIr">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WBe-XU-hIr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

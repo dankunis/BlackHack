@@ -18,14 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchedBefore = UserDefaults.standard.string(forKey: "userHash")
         if (launchedBefore == nil) {
             print("First launch, setting UserDefault.")
-            let networkService = NetworkService()
-            let userHash = networkService.generateAccount(newAccount: AccountCreator(password: "123"), completion: {(error) in
-                guard error != nil
+            let pass = "0xf8beb4b6f704c0111ca884aff96c23d450b7e3405417149e78b7903aa5b72573"
+            let networkService = StorageService()
+            let userHash = networkService.generateAccount(newAccount: AccountCreator(password: pass), completion: {(error) in
+                guard error == nil
                     else {
                         fatalError()
                 }
             })
             UserDefaults.standard.set(userHash, forKey: "userHash")
+            UserDefaults.standard.set(pass, forKey: "userPrivateKey")
         } else {
             print("User hash:\t\(UserDefaults.standard.string(forKey: "userHash")!)")
         }

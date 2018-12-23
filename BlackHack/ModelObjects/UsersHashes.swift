@@ -1,5 +1,5 @@
 //
-//  Get.swift
+//  UsersHashes.swift
 //  BlackHack
 //
 //  Created by Daniel on 22/12/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Get: Codable {
-    let mykey: String
+struct UsersHashes: Codable {
+    let hashes: [String]
 }

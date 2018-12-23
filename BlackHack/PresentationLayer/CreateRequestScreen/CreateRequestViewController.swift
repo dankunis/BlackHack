@@ -59,7 +59,7 @@ class CreateRequestViewController: UIViewController {
             showAlertWithMessage(title: "Введите корректные данные", message: nil)
             return
         }
-        let networkService = NetworkService()
+        let networkService = StorageService()
         let userHash = UserDefaults.standard.string(forKey: "userHash")!
         let post = MoneyRequest(title: reqTitle, description: reqDescription, wantedAmount: reqWantedAmount, currentAmount: 0, receiverRef: userHash)
         
