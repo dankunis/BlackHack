@@ -70,9 +70,10 @@ class CreateRequestViewController: UIViewController {
                 }
                 return
             }
-            DispatchQueue.main.async {
-                self?.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
-            }
+//            DispatchQueue.main.async {
+//                self?.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
+//            }
         })
+        self.showAlertWithMessage(title: "Congrats!", message: "Request successfully saved")
     }
 }
